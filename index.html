@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <meta name="author particlesJS" content="Vincent Garreau"/>
+    <meta name="author" content="Josef Havránek"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="blackout">
+<!-- particles.js container -->
+<div id="particles" ></div>
+<!-- scripts -->
+<script src="jsLibs/particles.min.js"></script>
+<script src="./PepeAnimator.js"></script>
+<script src="jsLibs/p5.min.js"></script>
+<script src="jsLibs/p5.sound.min.js"></script>
+<script src="./particleSetting.js"></script>
+<script>
+    let  animator=new PepeAnimator(60);
+    particlesJS.load('particles', setupOfParticles(), function () {
+        changeParticleSize(3);
+    });
+    function setup() {
+        animator.initialize();
+    }
+</script>
+</body>
+</html>
